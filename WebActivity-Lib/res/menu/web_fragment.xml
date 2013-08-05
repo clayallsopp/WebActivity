@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/web_menu_back"
+          android:icon="@drawable/ic_1_navigation_previous_item"
+          android:title="Back"
+          android:showAsAction="ifRoom"
+          support:showAsAction="ifRoom"/>
+    <item android:id="@+id/web_menu_forward"
+          android:icon="@drawable/ic_1_navigation_next_item"
+          android:title="Forward"
+          android:showAsAction="ifRoom"
+          support:showAsAction="ifRoom"/>
+    <item android:id="@+id/web_menu_cancel"
+          android:icon="@drawable/ic_1_navigation_cancel"
+          android:title="Cancel"
+          android:showAsAction="ifRoom"
+          support:showAsAction="ifRoom"/>
+    <item android:id="@+id/web_menu_share"
+          android:icon="@android:drawable/ic_menu_share"
+          android:title="Share"
+          android:showAsAction="ifRoom"
+          support:showAsAction="ifRoom"/>
+    <item android:id="@+id/web_menu_copy"
+          android:icon="@drawable/ic_menu_copy_holo_light"
+          android:title="Copy URL"
+          android:showAsAction="ifRoom"
+          support:showAsAction="ifRoom"/>
+    <item android:id="@+id/web_menu_browser"
+          android:icon="@drawable/ic_menu_forward"
+          android:title="Open in Browser"
+          android:showAsAction="ifRoom"
+          support:showAsAction="ifRoom"/>
+</menu>
