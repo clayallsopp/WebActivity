@@ -137,4 +137,8 @@ public class WebFragment extends Fragment implements WebFragmentable {
 
         this.getActivity().setTitle(title);
     }
+
+    public void setWebView(WebView webView) {
+        this._shared.setWebView(webView);
+    }
 }

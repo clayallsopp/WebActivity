@@ -3,6 +3,7 @@ package com.usepropeller.webactivity;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.Toast;
  * Created by clayallsopp on 8/4/13.
  */
 public class SharedWebFragment {
+    public static String WEB_VIEW_KEY = "web_view";
     private WebView _webView;
     private boolean _webViewLoading;
 
@@ -162,11 +164,18 @@ public class SharedWebFragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FrameLayout contentView = (FrameLayout) inflater.inflate(R.layout.web_fragment, container, false);
+        FrameLayout contentView = new FrameLayout(inflater.getContext());
+        contentView.addView(this.createWebView(inflater.getContext()), new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
         this.setWebView((WebView) contentView.findViewById(R.id.web_view));
 
         return contentView;
+    }
+
+    public WebView createWebView(Context context) {
+        WebView webView = new WebView(context);
+        webView.setId(R.id.web_view);
+        return webView;
     }
 
     /////////////////////////////////
