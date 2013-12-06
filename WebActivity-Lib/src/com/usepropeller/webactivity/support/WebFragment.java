@@ -43,7 +43,7 @@ public class WebFragment extends Fragment implements WebFragmentable {
         super.onCreateView(inflater, container, savedInstanceState);
 
         this.setHasOptionsMenu(true);
-        getActivity().invalidateOptionsMenu();
+        getActivity().supportInvalidateOptionsMenu();
 
         View contentView = this._shared.onCreateView(inflater, container, savedInstanceState);
 
